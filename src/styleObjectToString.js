@@ -8,7 +8,10 @@ function styleObjectToString(selector, styles) {
 
   return Object.keys(styles)
     .reduce((acc, key) => {
-      const value = styles[key]
+      let value = styles[key]
+      if (typeof value === 'number') {
+        value = value.toString()
+      }
       if (typeof value !== 'string') {
         return acc
       }
