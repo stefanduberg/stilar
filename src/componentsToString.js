@@ -31,7 +31,7 @@ function componentsToString(props) {
             return
           }
           result.push(
-            styleObjectToString(cssClass, value)
+            styleObjectToString(`${cssClass}${key}`, value)
           )
         }
       })
