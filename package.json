@@ -6,6 +6,7 @@
   "author": "Stefan Duberg <stefanduberg@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint src",
     "postinstall": "babel --out-dir lib src"
   },
   "dependencies": {
