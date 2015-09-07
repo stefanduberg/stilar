@@ -1,13 +1,13 @@
-stylesheet
+stilar
 ==========
 
 WIP
 
 ## Example
 ```js
-const StyleSheet = require('./src/StyleSheet.js')
+const Stilar = require('stilar')
 
-const theme = StyleSheet()
+const theme = Stilar()
 
 theme.component('Playlist', {
   Playlist: {

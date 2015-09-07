@@ -5,7 +5,7 @@ const Registry = require('./Registry.js')
 const Keyframes = require('./Keyframes.js')
 const objectAssign = require('object-assign')
 
-function StyleSheet(opts) {
+function Stilar(opts) {
   const options = objectAssign({}, opts)
   let observers = []
 
@@ -30,4 +30,4 @@ function StyleSheet(opts) {
   }
 }
 
-module.exports = StyleSheet
+module.exports = Stilar
