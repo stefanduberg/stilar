@@ -8,17 +8,17 @@ function Registry(options) {
   const components = {}
   const keyframes = {}
 
-  function addComponent(name, styles) {
+  const addComponent = (name, styles) => {
     components[name] = styles
     notifyObservers()
   }
 
-  function addKeyframes(name, styles) {
+  const addKeyframes = (name, styles) => {
     keyframes[name] = styles
     notifyObservers()
   }
 
-  function toStyleString() {
+  const toStyleString = () => {
     return [
       keyframesToString({keyframes, pseudoWhitelist}),
       componentsToString({components, pseudoWhitelist}),

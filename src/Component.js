@@ -6,7 +6,7 @@ const cloneDeep = require('lodash/lang/cloneDeep')
 function Component(options) {
   const {registry} = options
 
-  return function component(componentName, styles) {
+  return (componentName, styles) => {
     const classes = {}
 
     Object.keys(styles).forEach((styleName) => {

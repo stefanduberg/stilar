@@ -3,7 +3,7 @@
 function Keyframes(options) {
   const {registry} = options
 
-  return function keyframes(name, styles) {
+  return (name, styles) => {
     registry.addKeyframes(name, styles)
   }
 }
