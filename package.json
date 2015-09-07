@@ -7,12 +7,12 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src",
-    "prepublish": "mkdir -p lib && babel --out-dir lib src",
+    "prepublish": "mkdir -p lib && babel --out-dir lib src"
   },
   "files": [
     "index.js",
     "./lib/*",
-    "README.md",
+    "README.md"
   ],
   "dependencies": {
     "hyphenate-style-name": "^1.0.0",
