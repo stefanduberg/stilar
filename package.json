@@ -2,7 +2,7 @@
   "name": "stilar",
   "version": "0.0.1",
   "description": "styles in js",
-  "main": "index.js",
+  "main": "lib/Stilar.js",
   "author": "Stefan Duberg <stefanduberg@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,6 @@
     "postpublish": "rm -r lib"
   },
   "files": [
-    "index.js",
     "lib",
     "README.md"
   ],
