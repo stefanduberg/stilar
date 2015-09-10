@@ -3,28 +3,25 @@
 const Component = require('./Component.js')
 const Registry = require('./Registry.js')
 const Keyframes = require('./Keyframes.js')
-const objectAssign = require('object-assign')
 
 function Stilar(opts) {
-  const options = objectAssign({}, opts)
+  const options = {...opts}
   let observers = []
 
-  const notifyObservers = () => {
-    observers.forEach((observer) => observer())
-  }
+  const notifyObservers = () => observers.forEach((observer) => observer())
 
   const subscribe = (observer) => {
-    observers.push(observer)
+    observers = [...observers, observer]
     return () => {
       observers = observers.filter((candidate) => candidate !== observer)
     }
   }
 
-  const registry = Registry(objectAssign({notifyObservers}, options))
+  const registry = Registry({notifyObservers, ...options})
 
   return {
-    component: Component(objectAssign({registry}, options)),
-    keyframes: Keyframes(objectAssign({registry}, options)),
+    component: Component({registry, ...options}),
+    keyframes: Keyframes({registry, ...options}),
     subscribe,
     toStyleString: registry.toStyleString,
   }
