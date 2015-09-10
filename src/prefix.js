@@ -1,6 +1,6 @@
 'use strict'
 
-const capitalize = require('lodash/string/capitalize')
+const capitalize = require('capitalize')
 const hyphenateStyleName = require('hyphenate-style-name')
 const propertyPrefixes = require('./propertyPrefixes.js')
 const valuePrefixes = require('./valuePrefixes.js')

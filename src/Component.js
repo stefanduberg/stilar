@@ -1,7 +1,7 @@
 'use strict'
 
 const makeComponentClassName = require('./makeComponentClassName.js')
-const cloneDeep = require('lodash/lang/cloneDeep')
+const clone = require('clone')
 
 function Component(options) {
   const {registry} = options
@@ -13,7 +13,7 @@ function Component(options) {
       classes[styleName] = makeComponentClassName(componentName, styleName)
     })
 
-    registry.addComponent(componentName, cloneDeep(styles))
+    registry.addComponent(componentName, clone(styles))
 
     return classes
   }
