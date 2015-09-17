@@ -1,22 +1,18 @@
 'use strict'
 
-const makeComponentClassName = require('./makeComponentClassName.js')
-const clone = require('clone')
+import makeComponentClassName from './makeComponentClassName.js'
+import clone from 'clone'
 
-function Component(options) {
+export default (options) => {
   const {registry} = options
 
   return (componentName, styles) => {
-    const classes = {}
-
-    Object.keys(styles).forEach((styleName) => {
-      classes[styleName] = makeComponentClassName(componentName, styleName)
-    })
-
     registry.addComponent(componentName, clone(styles))
 
-    return classes
+    return Object.keys(styles)
+      .reduce((classes, styleName) => {
+        const className = makeComponentClassName(componentName, styleName)
+        return Object.assign(classes, {[styleName]: className})
+      }, {})
   }
 }
-
-module.exports = Component

@@ -1,6 +1,6 @@
 'use strict'
 
-const valuePrefixes = {
+export default {
   flex: ['webkit', 'ms'],
   inlineFlex: ['webkit', 'ms'],
   maxContent: ['webkit', 'moz'],
@@ -14,5 +14,3 @@ const valuePrefixes = {
   sticky: ['webkit'],
   pixelated: ['webkit', 'moz'],
 }
-
-module.exports = valuePrefixes

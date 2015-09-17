@@ -1,9 +1,9 @@
 'use strict'
 
-const makeComponentClassName = require('./makeComponentClassName.js')
-const styleObjectToString = require('./styleObjectToString.js')
+import makeComponentClassName from './makeComponentClassName.js'
+import styleObjectToString from './styleObjectToString.js'
 
-function componentsToString(props) {
+export default (props) => {
   const {components, pseudoWhitelist} = props
   let result = []
 
@@ -27,7 +27,7 @@ function componentsToString(props) {
         }
 
         if (key.indexOf(':') === 0) {
-          if (pseudoWhitelist && !pseudoWhitelist.includes(key)) {
+          if (pseudoWhitelist && pseudoWhitelist.indexOf(key) === -1) {
             return
           }
           result.push(
@@ -40,5 +40,3 @@ function componentsToString(props) {
 
   return result.join('')
 }
-
-module.exports = componentsToString

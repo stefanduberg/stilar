@@ -1,11 +1,9 @@
 'use strict'
 
-function makeComponentClassName(componentName, key) {
-  if (key === componentName) {
+export default (componentName, styleName) => {
+  if (styleName === componentName) {
     return componentName
   } else {
-    return `${componentName}-${key}`
+    return `${componentName}-${styleName}`
   }
 }
-
-module.exports = makeComponentClassName

@@ -1,11 +1,9 @@
 'use strict'
 
-function Keyframes(options) {
+export default (options) => {
   const {registry} = options
 
   return (name, styles) => {
     registry.addKeyframes(name, styles)
   }
 }
-
-module.exports = Keyframes

@@ -1,6 +1,6 @@
 'use strict'
 
-const propertyPrefixes = {
+export default {
   animation: ['webkit'],
   animationName: ['webkit'],
   animationDuration: ['webkit'],
@@ -84,5 +84,3 @@ const propertyPrefixes = {
   paddingBlockEnd: ['webkit'],
   appearance: ['webkit', 'moz'],
 }
-
-module.exports = propertyPrefixes

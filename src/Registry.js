@@ -1,29 +1,27 @@
 'use strict'
 
-const keyframesToString = require('./keyframesToString.js')
-const componentsToString = require('./componentsToString.js')
+import keyframesToString from './keyframesToString.js'
+import componentsToString from './componentsToString.js'
 
-function Registry(options) {
+export default (options) => {
   const {notifyObservers, pseudoWhitelist} = options
   const components = {}
   const keyframes = {}
 
   const addComponent = (name, styles) => {
-    components[name] = styles
+    Object.assign(components, {[name]: styles})
     notifyObservers()
   }
 
   const addKeyframes = (name, styles) => {
-    keyframes[name] = styles
+    Object.assign(keyframes, {[name]: styles})
     notifyObservers()
   }
 
-  const toStyleString = () => {
-    return [
-      keyframesToString({keyframes, pseudoWhitelist}),
-      componentsToString({components, pseudoWhitelist}),
-    ].join('')
-  }
+  const toStyleString = () => [
+    keyframesToString({keyframes, pseudoWhitelist}),
+    componentsToString({components, pseudoWhitelist}),
+  ].join('')
 
   return {
     addComponent,
@@ -31,5 +29,3 @@ function Registry(options) {
     toStyleString,
   }
 }
-
-module.exports = Registry

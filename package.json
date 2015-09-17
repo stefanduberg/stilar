@@ -16,6 +16,7 @@
     "README.md"
   ],
   "dependencies": {
+    "babel-runtime": "^5.8.24",
     "capitalize": "^1.0.0",
     "clone": "^1.0.2",
     "hyphenate-style-name": "^1.0.0"
