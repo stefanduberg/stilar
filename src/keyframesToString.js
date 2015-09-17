@@ -7,8 +7,8 @@ export default (props) => {
 
   return Object.keys(keyframes)
     .reduce((acc, name) => {
-      const values1 = [`@-webkit-keyframes ${name} {`]
-      const values2 = [`@keyframes ${name} {`]
+      const values1 = [`@-webkit-keyframes ${name}{`]
+      const values2 = [`@keyframes ${name}{`]
       Object.keys(keyframes[name]).forEach((setName) => {
         values1.push(`${setName}{`)
         values2.push(`${setName}{`)
