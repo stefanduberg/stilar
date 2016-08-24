@@ -7,15 +7,15 @@ function componentsToString(props) {
   const {components, pseudoWhitelist} = props
   let result = []
 
-  Object.keys(components).forEach((componentName) => {
+  Object.keys(components).forEach(function (componentName) {
     const component = components[componentName]
 
-    Object.keys(component).forEach((styleName) => {
+    Object.keys(component).forEach(function (styleName) {
       const styles = component[styleName]
       const cssClass = `.${makeComponentClassName(componentName, styleName)}`
       result.push(styleObjectToString(cssClass, styles))
 
-      Object.keys(styles).forEach((key) => {
+      Object.keys(styles).forEach(function (key) {
         const value = styles[key]
 
         if (key.indexOf('@media') === 0) {

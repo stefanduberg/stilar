@@ -6,11 +6,11 @@ var clone = require('clone')
 function Component(options) {
   const {registry} = options
 
-  return (componentName, styles) => {
+  return function (componentName, styles) {
     registry.addComponent(componentName, clone(styles))
 
     return Object.keys(styles)
-      .reduce((classes, styleName) => {
+      .reduce(function (classes, styleName) {
         const className = makeComponentClassName(componentName, styleName)
         classes[styleName] = className
         return classes

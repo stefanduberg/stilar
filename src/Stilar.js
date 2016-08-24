@@ -8,13 +8,17 @@ function Stilar(options) {
   let observers = []
 
   function notifyObservers() {
-    observers.forEach((observer) => observer())
+    observers.forEach(function (observer) {
+      observer()
+    })
   }
 
   function subscribe(observer) {
     observers = [...observers, observer]
-    return () => {
-      observers = observers.filter((candidate) => candidate !== observer)
+    return function () {
+      observers = observers.filter(function (candidate) {
+        return candidate !== observer
+      })
     }
   }
 

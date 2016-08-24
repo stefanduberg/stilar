@@ -9,7 +9,7 @@ function prefix(property, value) {
   const styles = []
 
   if (propertyPrefixes[property]) {
-    propertyPrefixes[property].forEach((vendor) => {
+    propertyPrefixes[property].forEach(function (vendor) {
       if (vendor !== 'ms') {
         vendor = capitalize(vendor)
       }
@@ -20,7 +20,7 @@ function prefix(property, value) {
   }
 
   if (valuePrefixes[value]) {
-    valuePrefixes[value].forEach((vendor) => {
+    valuePrefixes[value].forEach(function (vendor) {
       styles.push(`${property}:-${vendor}-${value};`)
     })
   }

@@ -6,13 +6,13 @@ function keyframesToString(props) {
   const {keyframes} = props
 
   return Object.keys(keyframes)
-    .reduce((acc, name) => {
+    .reduce(function (acc, name) {
       const values1 = [`@-webkit-keyframes ${name}{`]
       const values2 = [`@keyframes ${name}{`]
-      Object.keys(keyframes[name]).forEach((setName) => {
+      Object.keys(keyframes[name]).forEach(function (setName) {
         values1.push(`${setName}{`)
         values2.push(`${setName}{`)
-        Object.keys(keyframes[name][setName]).forEach((property) => {
+        Object.keys(keyframes[name][setName]).forEach(function (property) {
           values1.push(prefix(property, keyframes[name][setName][property]))
           values2.push(prefix(property, keyframes[name][setName][property]))
         })

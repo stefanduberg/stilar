@@ -7,7 +7,7 @@ function styleObjectToString(selector, styles) {
   const tail = '}'
 
   return Object.keys(styles)
-    .reduce((acc, key) => {
+    .reduce(function (acc, key) {
       let value = styles[key]
 
       if (typeof value === 'number') {
