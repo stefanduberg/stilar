@@ -4,18 +4,16 @@ var keyframesToString = require('./keyframesToString.js')
 var componentsToString = require('./componentsToString.js')
 
 function Registry(options) {
-  const {notifyObservers, pseudoWhitelist} = options
+  const {pseudoWhitelist} = options
   const components = {}
   const keyframes = {}
 
   function addComponent(name, styles) {
     components[name] = styles
-    notifyObservers()
   }
 
   function addKeyframes(name, styles) {
     keyframes[name] = styles
-    notifyObservers()
   }
 
   function toStyleString() {

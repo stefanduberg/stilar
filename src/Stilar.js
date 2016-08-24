@@ -5,29 +5,11 @@ var Registry = require('./Registry.js')
 var Keyframes = require('./Keyframes.js')
 
 function Stilar(options) {
-  let observers = []
-
-  function notifyObservers() {
-    observers.forEach(function (observer) {
-      observer()
-    })
-  }
-
-  function subscribe(observer) {
-    observers = [...observers, observer]
-    return function () {
-      observers = observers.filter(function (candidate) {
-        return candidate !== observer
-      })
-    }
-  }
-
-  const registry = Registry({...options, notifyObservers})
+  const registry = Registry({...options})
 
   return {
     component: Component({...options, registry}),
     keyframes: Keyframes({...options, registry}),
-    subscribe,
     toStyleString: registry.toStyleString
   }
 }
