@@ -1,6 +1,6 @@
 {
   "name": "stilar",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "styles in js",
   "main": "lib/Stilar.js",
   "author": "Stefan Duberg <stefanduberg@gmail.com>",
