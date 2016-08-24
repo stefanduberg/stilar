@@ -1,12 +1,10 @@
-// @flow
-
 declare type Options = {
   psuedoWhitelist?: Array<string>,
 }
 
 declare class Stilar {
   constructor(options?: Options): void;
-  component(name: string, styles: Object}): {[key: string]: string};
+  component(name: string, styles: Object): {[key: string]: string};
   keyframes(name: string, styles: Object): void;
   toStyleString(): string;
 }
