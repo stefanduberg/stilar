@@ -12,7 +12,8 @@ function Component(options) {
     return Object.keys(styles)
       .reduce((classes, styleName) => {
         const className = makeComponentClassName(componentName, styleName)
-        return Object.assign(classes, {[styleName]: className})
+        classes[styleName] = className
+        return classes
       }, {})
   }
 }

@@ -9,12 +9,12 @@ function Registry(options) {
   const keyframes = {}
 
   function addComponent(name, styles) {
-    Object.assign(components, {[name]: styles})
+    components[name] = styles
     notifyObservers()
   }
 
   function addKeyframes(name, styles) {
-    Object.assign(keyframes, {[name]: styles})
+    keyframes[name] = styles
     notifyObservers()
   }
 
