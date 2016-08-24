@@ -21,14 +21,14 @@ function Registry(options) {
   function toStyleString() {
     return [
       keyframesToString({keyframes, pseudoWhitelist}),
-      componentsToString({components, pseudoWhitelist}),
+      componentsToString({components, pseudoWhitelist})
     ].join('')
   }
 
   return {
     addComponent,
     addKeyframes,
-    toStyleString,
+    toStyleString
   }
 }
 

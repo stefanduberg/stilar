@@ -2,7 +2,7 @@
 
 var atRulesPrefixes = {
   '@viewport': ['ms'],
-  '@resolution': ['webkit'],
+  '@resolution': ['webkit']
 }
 
 module.exports = atRulesPrefixes

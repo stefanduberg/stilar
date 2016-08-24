@@ -15,7 +15,7 @@ var valuePrefixes = {
   sticky: ['webkit'],
   pixelated: ['webkit', 'moz'],
   grid: ['ms'],
-  'inline-grid': ['ms'],
+  'inline-grid': ['ms']
 }
 
 module.exports = valuePrefixes

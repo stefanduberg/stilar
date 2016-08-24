@@ -80,7 +80,7 @@ var propertyPrefixes = {
   gridColumn: ['ms'],
   justifyItems: ['ms'],
   gridRowAlign: ['ms'],
-  textSpacing: ['ms'],
+  textSpacing: ['ms']
 }
 
 module.exports = propertyPrefixes

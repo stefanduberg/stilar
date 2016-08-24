@@ -6,7 +6,7 @@ var selectorPrefixes = {
   ':fullscreen': ['webkit', 'moz', 'ms'],
   '::backdrop': ['webkit'],
   ':read-only': ['moz'],
-  ':read-write': ['moz'],
+  ':read-write': ['moz']
 }
 
 module.exports = selectorPrefixes

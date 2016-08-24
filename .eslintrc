@@ -12,7 +12,7 @@
     "arrow-parens": [2, "always"],
     "arrow-spacing": [2, {"before": true, "after": true}],
     "brace-style": 2,
-    "comma-dangle": [2, "always-multiline"],
+    "comma-dangle": 2,
     "consistent-return": 2,
     "constructor-super": 2,
     "dot-notation": 2,

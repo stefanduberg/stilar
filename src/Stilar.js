@@ -24,7 +24,7 @@ function Stilar(options) {
     component: Component({...options, registry}),
     keyframes: Keyframes({...options, registry}),
     subscribe,
-    toStyleString: registry.toStyleString,
+    toStyleString: registry.toStyleString
   }
 }
 
