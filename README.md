@@ -7,7 +7,7 @@ WIP
 ```js
 const Stilar = require('stilar')
 
-const theme = Stilar()
+const theme = new Stilar()
 
 theme.component('Playlist', {
   Playlist: {
