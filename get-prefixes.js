@@ -1,8 +1,8 @@
 'use strict'
 
-const autoprefixer = require('autoprefixer')
+var autoprefixer = require('autoprefixer')
 
-const browsers = [
+var browsers = [
   'last 2 chrome versions',
   'last 2 firefox versions',
   'last 2 edge versions',
@@ -11,7 +11,7 @@ const browsers = [
   'last 2 safari versions',
   'Firefox ESR',
   'ie 11',
-  'ie_mob 11',
+  'ie_mob 11'
 ]
 
-console.log(autoprefixer({browsers}).info())
+console.log(autoprefixer({browsers: browsers}).info())
