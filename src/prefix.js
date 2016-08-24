@@ -1,11 +1,11 @@
 'use strict'
 
-import capitalize from 'capitalize'
-import hyphenateStyleName from 'hyphenate-style-name'
-import propertyPrefixes from './propertyPrefixes.js'
-import valuePrefixes from './valuePrefixes.js'
+var capitalize = require('capitalize')
+var hyphenateStyleName = require('hyphenate-style-name')
+var propertyPrefixes = require('./propertyPrefixes.js')
+var valuePrefixes = require('./valuePrefixes.js')
 
-export default (property, value) => {
+function prefix(property, value) {
   const styles = []
 
   if (propertyPrefixes[property]) {
@@ -29,3 +29,5 @@ export default (property, value) => {
 
   return styles.join('')
 }
+
+module.exports = prefix

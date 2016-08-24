@@ -1,8 +1,8 @@
 'use strict'
 
-import prefix from './prefix.js'
+var prefix = require('./prefix.js')
 
-export default (props) => {
+function keyframesToString(props) {
   const {keyframes} = props
 
   return Object.keys(keyframes)
@@ -26,3 +26,5 @@ export default (props) => {
     }, [])
     .join('')
 }
+
+module.exports = keyframesToString

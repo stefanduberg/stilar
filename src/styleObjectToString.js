@@ -1,8 +1,8 @@
 'use strict'
 
-import prefix from './prefix.js'
+var prefix = require('./prefix.js')
 
-export default (selector, styles) => {
+function styleObjectToString(selector, styles) {
   const head = [`${selector}{`]
   const tail = '}'
 
@@ -23,3 +23,5 @@ export default (selector, styles) => {
     .concat(tail)
     .join('')
 }
+
+module.exports = styleObjectToString

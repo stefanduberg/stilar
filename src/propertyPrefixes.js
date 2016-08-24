@@ -1,6 +1,6 @@
 'use strict'
 
-export default {
+var propertyPrefixes = {
   filter: ['webkit'],
   mask: ['webkit'],
   maskImage: ['webkit'],
@@ -82,3 +82,5 @@ export default {
   gridRowAlign: ['ms'],
   textSpacing: ['ms'],
 }
+
+module.exports = propertyPrefixes

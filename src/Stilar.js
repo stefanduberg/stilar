@@ -1,15 +1,17 @@
 'use strict'
 
-import Component from './Component.js'
-import Registry from './Registry.js'
-import Keyframes from './Keyframes.js'
+var Component = require('./Component.js')
+var Registry = require('./Registry.js')
+var Keyframes = require('./Keyframes.js')
 
-export default (options) => {
+function Stilar(options) {
   let observers = []
 
-  const notifyObservers = () => observers.forEach((observer) => observer())
+  function notifyObservers() {
+    observers.forEach((observer) => observer())
+  }
 
-  const subscribe = (observer) => {
+  function subscribe(observer) {
     observers = [...observers, observer]
     return () => {
       observers = observers.filter((candidate) => candidate !== observer)
@@ -25,3 +27,5 @@ export default (options) => {
     toStyleString: registry.toStyleString,
   }
 }
+
+module.exports = Stilar

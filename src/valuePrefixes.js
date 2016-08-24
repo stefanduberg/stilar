@@ -1,6 +1,6 @@
 'use strict'
 
-export default {
+var valuePrefixes = {
   filter: ['webkit'],
   element: ['moz'],
   'image-set': ['webkit'],
@@ -17,3 +17,5 @@ export default {
   grid: ['ms'],
   'inline-grid': ['ms'],
 }
+
+module.exports = valuePrefixes

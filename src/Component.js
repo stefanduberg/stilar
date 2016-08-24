@@ -1,9 +1,9 @@
 'use strict'
 
-import makeComponentClassName from './makeComponentClassName.js'
-import clone from 'clone'
+var makeComponentClassName = require('./makeComponentClassName.js')
+var clone = require('clone')
 
-export default (options) => {
+function Component(options) {
   const {registry} = options
 
   return (componentName, styles) => {
@@ -16,3 +16,5 @@ export default (options) => {
       }, {})
   }
 }
+
+module.exports = Component

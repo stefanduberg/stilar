@@ -1,6 +1,6 @@
 'use strict'
 
-export default {
+var selectorPrefixes = {
   '::selection': ['moz'],
   '::placeholder': ['webkit', 'moz', 'ms'],
   ':fullscreen': ['webkit', 'moz', 'ms'],
@@ -8,3 +8,5 @@ export default {
   ':read-only': ['moz'],
   ':read-write': ['moz'],
 }
+
+module.exports = selectorPrefixes
