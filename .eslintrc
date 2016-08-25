@@ -21,6 +21,7 @@
     "func-style": [2, "declaration"],
     "handle-callback-err": [2, "^.*(e|E)rr"],
     "indent": [2, 2],
+    "keyword-spacing": [2, {"before": true, "after": true}],
     "max-len": [2, 80],
     "no-class-assign": 2,
     "no-console": 2,
@@ -38,7 +39,6 @@
     "quotes": [2, "single"],
     "quote-props": [2, "as-needed"],
     "semi": [2, "never"],
-    "space-after-keywords": [2, "always"],
     "space-before-blocks": 2,
     "strict": [2, "global"],
 
