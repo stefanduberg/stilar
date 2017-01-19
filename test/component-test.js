@@ -1,6 +1,6 @@
 'use strict'
 
-var Stilar = require('../lib/Stilar.js')
+var Stilar = require('../lib/stilar.js')
 var test = require('tape')
 
 test('component() returns an object with classNames', function (t) {
@@ -23,8 +23,6 @@ test('component() returns an object with classNames', function (t) {
       }
     }
   })
-
-  console.log(stilar.toStyleString())
 
   t.equal(styles.Widget, 'Widget')
   t.equal(styles.button, 'Widget-button')
